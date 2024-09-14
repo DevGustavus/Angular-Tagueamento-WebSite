@@ -1,25 +1,40 @@
-<app-header-home></app-header-home>
+<div class="min-h-screen flex flex-col justify-between">
+  <app-header-home></app-header-home>
 
-<main>
-  <div class="flex flex-col w-[600px] mx-auto m-4 justify-center">
-    <h2 class="text-2xl font-bold text-center">What is it?</h2>
-    <p class="text-center mb-4">
-      Lorem ipsum dolor sit amet. Non error officia a nulla architecto vel quia
-      unde qui repudiandae assumenda. Sed unde alias qui sint officiis non
-      aliquid itaque sit voluptas quia sed harum libero aut obcaecati internos.
-      Qui soluta enim qui explicabo atque ut voluptas molestiae et voluptatibus
-      veniam qui voluptatem esse id quod inventore. Hic eligendi officiis quo
-      laborum eligendi et tempore delectus est voluptate repellat. Et internos
-      nobis eos rerum quia eum expedita officiis.
-    </p>
-    <img src="hope.webp" alt="hope image" />
-    <button
-      type="button"
-      class="text-xl text-white bg-gradient-to-r from-purple-500 to-pink-500 hover:bg-gradient-to-l focus:ring-4 focus:outline-none focus:ring-purple-200 dark:focus:ring-purple-800 font-medium rounded-lg px-5 py-2.5 text-center"
+  <main>
+    <div
+      class="container-main flex flex-col w-[600px] mx-auto m-4 justify-center"
     >
-      Initiate operation
-    </button>
-  </div>
-</main>
+      <h2 class="text-2xl font-bold text-center">What is it?</h2>
+      <p class="text-center mb-4">
+        Lorem ipsum dolor sit amet. Non error officia a nulla architecto vel
+        quia unde qui repudiandae assumenda. Sed unde alias qui sint officiis
+        non aliquid itaque sit voluptas quia sed harum libero aut obcaecati
+        internos. Qui soluta enim qui explicabo atque ut voluptas molestiae et
+        voluptatibus veniam qui voluptatem esse id quod inventore. Hic eligendi
+        officiis quo laborum eligendi et tempore delectus est voluptate
+        repellat. Et internos nobis eos rerum quia eum expedita officiis.
+      </p>
 
-<app-footer></app-footer>
+      <div>
+        <img src="hope.webp" alt="hope image" />
+      </div>
+
+      <button
+        id="initiate_operation"
+        type="button"
+        class="text-xl text-white bg-gradient-to-r from-purple-500 to-pink-500 hover:bg-gradient-to-l dark:focus:ring-purple-800 font-medium rounded-lg px-5 py-2.5 text-center"
+        (click)="showModal()"
+      >
+        Initiate operation
+      </button>
+    </div>
+  </main>
+
+  <app-footer></app-footer>
+</div>
+
+<app-modal-confirm
+  [isVisible]="isModalVisible"
+  (isclosed)="handleClose()"
+></app-modal-confirm>

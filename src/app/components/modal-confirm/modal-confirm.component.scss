@@ -1,0 +1,62 @@
+// Animação para aparecer (Entering)
+@keyframes modal-enter {
+  from {
+    opacity: 0;
+    transform: translateY(1rem) scale(0.95);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0) scale(1);
+  }
+}
+
+@keyframes modal-enter-sm {
+  from {
+    opacity: 0;
+    transform: translateY(0) scale(0.95);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0) scale(1);
+  }
+}
+
+// Animação para desaparecer (Leaving)
+@keyframes modal-leave {
+  from {
+    opacity: 1;
+    transform: translateY(0) scale(1);
+  }
+  to {
+    opacity: 0;
+    transform: translateY(1rem) scale(0.95);
+  }
+}
+
+@keyframes modal-leave-sm {
+  from {
+    opacity: 1;
+    transform: translateY(0) scale(1);
+  }
+  to {
+    opacity: 0;
+    transform: translateY(0) scale(0.95);
+  }
+}
+
+// Aplicando as animações
+.modal-enter-active {
+  animation: modal-enter 300ms ease-out forwards;
+
+  @media (min-width: 640px) { // sm: breakpoint
+    animation: modal-enter-sm 300ms ease-out forwards;
+  }
+}
+
+.modal-leave-active {
+  animation: modal-leave 200ms ease-in forwards;
+
+  @media (min-width: 640px) { // sm: breakpoint
+    animation: modal-leave-sm 200ms ease-in forwards;
+  }
+}
