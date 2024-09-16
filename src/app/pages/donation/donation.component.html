@@ -1,6 +1,6 @@
-<div class="min-h-screen flex flex-col justify-between">
+<div class="min-h-screen flex flex-col justify-between bg-slate-50">
   <main class="max-w-[1600px] mx-auto">
-    <h2 class="text-2xl font-bold text-center my-16">Enlist today!</h2>
+    <h2 class="text-4xl font-bold text-center my-16">Enlist today!</h2>
     <div
       class="container-enlist flex flex-col mx-auto justify-center px-8 py-16 bg-lime-50"
     >
@@ -15,6 +15,39 @@
 
     <div class="container-products">
       <app-product-list></app-product-list>
+      <div class="flex justify-end"><app-modal-wallet></app-modal-wallet></div>
+      <app-cupom-form></app-cupom-form>
+    </div>
+
+    <div class="container-contract flex flex-col gap-6 px-8 py-16 bg-lime-50">
+      <h2 class="text-center text-2xl font-bold">Contracts:</h2>
+
+      <app-people-input></app-people-input>
+      <app-price-input></app-price-input>
+
+      <div class="flex justify-between gap-20">
+        <div class="flex flex-col justify-between">
+          <div>
+            <h3 class="text-1xl font-bold text-center">Terms:</h3>
+            <p>
+              Lorem ipsum dolor sit amet. Non error officia a nulla architecto
+              vel quia unde qui repudiandae assumenda. Sed unde alias qui sint
+              officiis non aliquid itaque sit voluptas quia sed harum libero aut
+              obcaecati internos.
+            </p>
+          </div>
+          <button
+            type="button"
+            class="text-xl max-h-20 w-full text-white bg-gradient-to-r from-lime-900 to-lime-700 hover:bg-gradient-to-l dark:focus:ring-lime-950 font-medium rounded-lg px-5 py-2.5 text-center"
+          >
+            Initiate operation
+          </button>
+        </div>
+
+        <div class="max-w-[350px]">
+          <img src="mercenary_prep.webp" alt="mercenary job" />
+        </div>
+      </div>
     </div>
   </main>
 

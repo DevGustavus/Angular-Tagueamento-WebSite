@@ -8,9 +8,9 @@ export const routes: Routes = [
     title: 'WebSite | Home',
   },
   {
-    path: 'donation',
+    path: 'enlist',
     loadComponent: () =>
       import('./../pages/donation/donation.component').then((c) => c.DonationComponent),
-    title: 'WebSite | Donation',
+    title: 'WebSite | Enlist',
   },
 ];

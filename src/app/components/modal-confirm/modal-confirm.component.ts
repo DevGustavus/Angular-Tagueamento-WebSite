@@ -21,6 +21,6 @@ export class ModalConfirmComponent {
   }
 
   acceptAction() {
-    this.router.navigate(['/donation']);
+    this.router.navigate(['/enlist']);
   }
 }

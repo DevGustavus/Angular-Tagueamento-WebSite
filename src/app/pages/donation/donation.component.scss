@@ -1,5 +1,9 @@
 @import "./../../../scss/variables";
 
-h2 {
-  font-family: "ProtestGuerrillaRegular";
+
+
+main {
+  h2, h3, p, button{
+    font-family: "ProtestGuerrillaRegular";
+  }
 }
