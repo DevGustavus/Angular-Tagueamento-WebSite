@@ -9,7 +9,8 @@ export const appConfig: ApplicationConfig = {
     provideZoneChangeDetection({ eventCoalescing: true }),
     provideRouter(routes),
     provideClientHydration(),
+    { provide: 'googleTagManagerId', useValue: 'GTM-P2DJ7H9N' }
   ],
 
-  
+
 };
