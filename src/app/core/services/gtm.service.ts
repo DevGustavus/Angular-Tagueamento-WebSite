@@ -50,11 +50,9 @@ export class GtmService {
     const pageViewEvent = {
       event: 'pageView',
       page: {
-        pagepath: GoogleAnalyticsView[params.pathname],
-        ambiente: 'angular-tagueamento-web-site.vercel.app',
-        funcionalidade: GoogleAnalyticsView[params.funcionalidade],
-        titulo: GoogleAnalyticsView[params.titulo],
-        nome: `angular-tagueamento-web-site:${GoogleAnalyticsView[params.funcionalidade]}`,
+        page_location: GoogleAnalyticsView[params.funcionalidade],
+        page_path: GoogleAnalyticsView[params.pathname],
+        page_title: GoogleAnalyticsView[params.titulo],
       },
     };
 
